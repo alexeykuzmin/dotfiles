@@ -4,8 +4,8 @@ alias please=sudo
 # programs
 alias slt='open -a "Sublime Text 2"'
 
-# `cat` with beautiful colors. 
-#  Requires Pygments installed. sudo easy_install Pygments
+# `cat` with beautiful colors.
+# Requires Pygments installed. sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
 
 # for MacPorts
