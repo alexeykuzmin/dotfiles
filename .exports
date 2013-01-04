@@ -1,0 +1,27 @@
+# Make nano the default editor
+export EDITOR="nano"
+
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+
+# Set up PATH
+# for MacPorts
+PATH=/opt/local/sbin:$PATH
+PATH=/opt/local/bin:$PATH
+PATH=/Developer/usr/bin:$PATH
+
+# for Homebrew
+PATH=/usr/local/bin:$PATH
+
+# for npm modules
+PATH=/usr/local/share/npm/bin:$PATH
+
+#
+PATH=~/bin:$PATH
+
+export PATH
+
+
+export NODE_PATH="/usr/local/share/npm/lib/node_modules"

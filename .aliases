@@ -1,0 +1,13 @@
+# be nice
+alias please=sudo
+
+# programs
+alias slt='open -a "Sublime Text 2"'
+
+# `cat` with beautiful colors. 
+#  Requires Pygments installed. sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
+# for MacPorts
+alias port="sudo port"
+alias portup="port -v selfupdate && port upgrade outdated"
