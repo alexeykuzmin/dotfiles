@@ -27,7 +27,7 @@ function gf() {
     /^[MA]\t/ {printf "%s\thttps://github.com/$user_repo/blob/%s/%s\n", \$1, sha, \$2; next}
     /.*/ {print \$0}
 AWK
-  )"
+  )" | less -F
 }
 
 
