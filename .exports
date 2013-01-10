@@ -18,6 +18,9 @@ PATH=/usr/local/bin:$PATH
 # for npm modules
 PATH=/usr/local/share/npm/bin:$PATH
 
+# SML/NJ
+PATH="$PATH:/usr/local/smlnj-110.75/bin"
+
 #
 PATH=~/bin:$PATH
 
