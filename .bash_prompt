@@ -49,9 +49,18 @@ function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-# optional
+
 function usernamehost() {
-  echo "${GREEN}$USER ${RESET}at ${PURPLE}$HOSTNAME ${RESET}in ";
+  default_hostname='jj-spoon-osx.local'
+  default_username='jj-spoon'
+
+  if [ $HOSTNAME != $default_hostname ]; then
+    # always show username and host on remote machines
+    echo "${GREEN}$USER ${RESET}at ${PURPLE}$HOSTNAME ${RESET}in ";
+  elif [[ $USER != $default_username ]]; then
+    # show username in red if not default
+    echo "${RED}$USER ${RESET}in ";
+  fi
 }
 
 
@@ -67,4 +76,4 @@ function usernamehost() {
 # in the iterm tab
 # \[\e]1;\]$(basename $(dirname $PWD))/\W\[\a\]
 
-PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\[$YELLOW\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$CYAN\]\$(parse_git_branch)\[$PURPLE\]\n\$ \[$RESET\]"
+PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$YELLOW\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$CYAN\]\$(parse_git_branch)\[$PURPLE\]\n\$ \[$RESET\]"
