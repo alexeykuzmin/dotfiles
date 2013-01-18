@@ -51,7 +51,7 @@ function parse_git_branch() {
 
 
 function usernamehost() {
-  default_hostname='jj-spoon-osx.local'
+  default_hostname='jj-spoon-osx'
   default_username='jj-spoon'
 
   if [ $HOSTNAME != $default_hostname ]; then
