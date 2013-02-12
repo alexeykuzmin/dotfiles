@@ -24,6 +24,9 @@ PATH="$PATH:/usr/local/smlnj-110.75/bin"
 #
 PATH=~/bin:$PATH
 
+# Chromium dev
+PATH=~/bin/depot_tools:$PATH
+
 export PATH
 
 
