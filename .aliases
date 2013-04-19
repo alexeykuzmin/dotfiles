@@ -11,3 +11,6 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # for MacPorts
 alias port="sudo port"
 alias portup="port -v selfupdate && port upgrade outdated"
+
+# hub for GitHub (http://defunkt.io/hub/)
+alias git=hub
