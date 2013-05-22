@@ -13,4 +13,4 @@ alias port="sudo port"
 alias portup="port -v selfupdate && port upgrade outdated"
 
 # hub for GitHub (http://defunkt.io/hub/)
-alias git=hub
+# alias git=hub
