@@ -6,6 +6,7 @@
   br = branch
   ci = commit
   co = checkout
+  cp = cherry-pick
   df = diff --color --color-words --abbrev
   pom = push origin master
   rv = remote -v
