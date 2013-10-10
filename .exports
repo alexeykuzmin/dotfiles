@@ -25,11 +25,7 @@ PATH="$PATH:/usr/local/smlnj-110.75/bin"
 PATH=~/bin:$PATH
 
 # Chromium dev
-export CCACHE_CPP2=yes
-export CCACHE_SLOPPINESS=time_macros
-export CC="ccache clang -Qunused-arguments"
-export CXX="ccache clang++ -Qunused-arguments"
-export GYP_DEFINES="clang=1 fastbuild=1"
+export GYP_DEFINES="clang=1 fastbuild=1 disable_nacl=1"
 export GYP_GENERATORS=ninja
 PATH=~/bin/depot_tools:$PATH
 
