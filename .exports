@@ -7,27 +7,17 @@ export EDITOR="nano"
 
 
 # Set up PATH
-# for MacPorts
-PATH=/opt/local/sbin:$PATH
-PATH=/opt/local/bin:$PATH
-PATH=/Developer/usr/bin:$PATH
 
 # for Homebrew
 PATH=/usr/local/bin:$PATH
 
-# for npm modules
-PATH=/usr/local/share/npm/bin:$PATH
-
-# SML/NJ
-PATH="$PATH:/usr/local/smlnj-110.75/bin"
-
-#
+# Local binares
 PATH=~/bin:$PATH
 
 # Chromium dev
 export GYP_DEFINES="clang=1 fastbuild=1 disable_nacl=1"
 export GYP_GENERATORS=ninja
-PATH=~/bin/depot_tools:$PATH
+PATH=$PATH:~/bin/depot_tools
 
 export PATH
 
