@@ -2,7 +2,7 @@
 alias please=sudo
 
 # programs
-alias slt='open -a "Sublime Text 2"'
+alias slt='open -a "Sublime Text"'
 
 # `cat` with beautiful colors.
 # Requires Pygments installed. sudo easy_install Pygments
