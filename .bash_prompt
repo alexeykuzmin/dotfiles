@@ -51,10 +51,11 @@ function parse_git_branch() {
 
 
 function usernamehost() {
-  default_hostname='jj-spoon-osx'
+  default_hostname_prefix='jj-spoon-osx'
+  default_hostname_pattern="${default_hostname_prefix}*"
   default_username='jj-spoon'
 
-  if [ $HOSTNAME != $default_hostname ]; then
+  if [[ $HOSTNAME != $default_hostname_pattern ]]; then
     # always show username and host on remote machines
     echo "${GREEN}$USER ${RESET}at ${PURPLE}$HOSTNAME ${RESET}in ";
   elif [[ $USER != $default_username ]]; then
