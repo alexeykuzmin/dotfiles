@@ -7,3 +7,8 @@ unset file
 
 # Load RVM if installed (http://rvm.io)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+
+# NVM (https://github.com/creationix/nvm)
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
