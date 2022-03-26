@@ -4,11 +4,6 @@ for file in ~/.{bash_prompt,exports,aliases,functions,git-completion.bash}; do
 done
 unset file
 
-
-# Load RVM if installed (http://rvm.io)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-
 # NVM (https://github.com/creationix/nvm)
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
